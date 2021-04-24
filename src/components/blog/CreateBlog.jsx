@@ -126,7 +126,7 @@ class CreateBlog extends Component {
                                        {this.state.blog.image && (
                                           <img
                                              src={this.state.blog.image}
-                                             alt="productimage"
+                                             alt="blogimage"
                                              width="40px"
                                              height="40px"
                                           />

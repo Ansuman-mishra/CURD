@@ -46,7 +46,7 @@ export class Login extends Component {
          <>
             <Navbar />
             {this.state.isSubmitted ? (
-               <Redirect to="/Home" />
+               <Redirect to="/" />
             ) : (
                <>
                   <div className="global-container">

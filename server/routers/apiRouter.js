@@ -65,7 +65,7 @@ router.post("/blog", async (req, res) => {
          });
       }
       blogs = new blog(newblog);
-      blogs = await blogs.save(); //insert the product to database
+      blogs = await blogs.save(); //insert the blog to database
       res.status(200).json({
          result: "blog is created successfully",
          blog: blogs,
@@ -95,7 +95,7 @@ router.put("/blog/:id", async (req, res) => {
          content: req.body.content,
          info: req.body.info,
       };
-      //product is exit or not
+      //blog is exit or not
       let blogs = await blog.findById(blogId);
       if (!blogs) {
          return res.status(401).json({
@@ -111,8 +111,8 @@ router.put("/blog/:id", async (req, res) => {
          { new: true }
       );
       res.status(200).json({
-         result: "product is updated",
-         product: blogs,
+         result: "blog is updated",
+         blog: blogs,
       });
    } catch (error) {
       console.log(error);
@@ -131,17 +131,17 @@ router.put("/blog/:id", async (req, res) => {
 router.delete("/blog/:id", async (req, res) => {
    try {
       let blogId = req.params.id;
-      let blogs = await blog.findById(blogId); //product is exit or not
+      let blogs = await blog.findById(blogId); //blog is exit or not
       if (!blogs) {
          return res.status(401).json({
             msg: "No blog Found",
          });
       }
-      //delete the product
+      //delete the blog
       blogs = await blog.findByIdAndDelete(blogId);
       res.status(200).json({
-         result: "product is deleted",
-         product: blogs,
+         result: "blog is deleted",
+         blog: blogs,
       });
    } catch (error) {
       console.log(error);

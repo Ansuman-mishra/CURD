@@ -11,7 +11,7 @@ class Admin extends Component {
          errMessage: "",
       };
    }
-   //get all products
+   //get all blogs
    componentDidMount() {
       this.getAllblog();
    }
@@ -30,7 +30,7 @@ class Admin extends Component {
             });
          });
    };
-   //delete product
+   //delete blog
 
    deleteblog = (blogId) => {
       let dataUrl = `http://127.0.0.1:5000/api/blog/${blogId}`;
@@ -51,7 +51,7 @@ class Admin extends Component {
             <div className="container mt-4">
                <div className="row animated slideInLeft">
                   <div className="col">
-                     <h2>Product Details</h2>
+                     <h2>Blog Details</h2>
                      <p className="lead">
                         Lorem ipsum dolor, sit amet consectetur adipisicing
                         elit. Ducimus hic rem officiis omnis ab aut alias magni
@@ -69,7 +69,7 @@ class Admin extends Component {
                         <thead className="bg-dark text-white">
                            <tr>
                               <th>SNO</th>
-                              <th>Product</th>
+                              <th>blog</th>
                               <th>Name</th>
                               <th>Price</th>
                               <th>Content</th>
@@ -127,7 +127,7 @@ class Admin extends Component {
                                        className="text-danger font-weight-bold"
                                     >
                                        ------------------No record Found PLZ!!
-                                       Insert the Products---------------------
+                                       Insert the blogs---------------------
                                     </td>
                                  </tr>
                               </>
