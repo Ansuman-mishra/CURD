@@ -17,7 +17,7 @@ function App() {
             <Switch>
                {localStorage.getItem("document") ? (
                   <>
-                     <Route exact path="/home" component={Home} />
+                     <Route exact path="/" component={Home} />
                      <Route exact path="/blog" component={Blog} />
                      <Route exact path="/admin" component={Admin} />
                      <Route exact path="/create-blog" component={CreateBlog} />
